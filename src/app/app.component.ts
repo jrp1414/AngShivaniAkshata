@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  // selector:"app-main",
+  // selector:"[app-main]",
+  selector:".app-main",
+  template:"<h1>Inline Templare</h1>"
 })
-export class AppComponent {
-  title = 'AngShivaniAkshata';
+export class AppComponent{
+
 }
