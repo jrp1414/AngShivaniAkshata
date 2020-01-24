@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {StringInterpolationComponent} from "./Basics/string-interpolation/string-interpolation.component";
+import { PropertyBindingComponent } from './Basics/property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StringInterpolationComponent
+    StringInterpolationComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule

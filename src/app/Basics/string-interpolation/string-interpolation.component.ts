@@ -2,7 +2,16 @@ import { Component } from "@angular/core";
 
 @Component({
     selector:"string-interpolation",
-    templateUrl:"./string-interpolation.component.html"
+    templateUrl:"./string-interpolation.component.html",
+    // styles:[
+    //     // "div{background-color:aqua;}"
+    //     `div{
+    //         background-color:aqua;
+    //     }`
+    // ]
+    styleUrls:[
+        "./string-interpolation.component.css"
+    ]
 })
 export class StringInterpolationComponent{
     // name;   
