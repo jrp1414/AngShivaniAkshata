@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import {StringInterpolationComponent} from "./Basics/string-interpolation/string-interpolation.component";
 import { PropertyBindingComponent } from './Basics/property-binding/property-binding.component';
+import { EventBindingComponent } from './Basics/event-binding/event-binding.component';
+import { TwowayBindingComponent } from './Basics/twoway-binding/twoway-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StringInterpolationComponent,
-    PropertyBindingComponent
+    PropertyBindingComponent,
+    EventBindingComponent,
+    TwowayBindingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

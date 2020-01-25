@@ -1,0 +1,58 @@
+<h2>Two Way Binding Examples</h2>
+
+<h4>One Way problems</h4>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="Name">One Way Binding Data</label>
+      <input type="text" (input)="OneWayDataChange($event)" class="form-control" name="" id="Name" aria-describedby="helpId" placeholder="Name">      
+      <small id="helpId" class="form-text text-muted">Enter Name</small>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="alert alert-info" role="alert">
+      <strong>{{OneWayData}}</strong>
+   </div>
+  </div>
+  <div class="col-md-2">
+   <button type="button" class="btn btn-primary" (click)="OneWayTest()">One Way Test</button>
+  </div>
+</div>
+
+<h4>Two Way Solutions</h4>
+<!-- <div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="Name">Two Way Binding Data</label>
+      <input type="text" class="form-control" name="" id="Name" [(ngModel)]="TwoWayData" aria-describedby="helpId" placeholder="Name">      
+      <small id="helpId" class="form-text text-muted">Enter Name</small>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="alert alert-info" role="alert">
+      <strong>{{TwoWayData}}</strong>
+   </div>
+  </div>
+  <div class="col-md-2">
+   <button type="button" class="btn btn-primary" (click)="TwoWayTest()">Two Way Test</button>
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label for="Name">Two Way Binding Data</label>
+      <input type="text" class="form-control" name="" id="Name" [ngModel]="TwoWayData" (ngModelChange)="TwoWayDataChange($event)" aria-describedby="helpId" placeholder="Name">      
+      <small id="helpId" class="form-text text-muted">Enter Name</small>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="alert alert-info" role="alert">
+      <strong>{{TwoWayData}}</strong>
+   </div>
+  </div>
+  <div class="col-md-2">
+   <button type="button" class="btn btn-primary" (click)="TwoWayTest()">Two Way Test</button>
+  </div>
+</div>

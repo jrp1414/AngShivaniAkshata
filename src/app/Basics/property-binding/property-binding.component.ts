@@ -14,9 +14,12 @@ export class PropertyBindingComponent {
   Message:string="Starting Message";
 
   constructor() {
+    var tempThis = this;
     setTimeout(()=>{
       this.buttonDisabled = false;
       this.Message = "Updated the message";
     },5000);
   }
 }
+
+
