@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwowayBindingComponent {
 
+  constructor() {
+    var nums = [5,6,8,9,85,9];
+    // for(var i in nums){
+    //   console.log(nums[i]);
+    // }
+
+    // nums.forEach((value)=>{
+    //  console.log("Log --" + value); 
+    // });
+
+    // for(var i of nums){
+    //   console.log(i);
+    // }
+  }
+
   OneWayData:string="";
   OneWayDataChange(event){
     this.OneWayData = event.target.value;
@@ -26,3 +41,5 @@ export class TwowayBindingComponent {
     this.TwoWayData = event.toUpperCase();
   }
 }
+
+
