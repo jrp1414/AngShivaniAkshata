@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-header">
+    {{product?.productCode}}
+  </div>
+  <div class="card-body">
+    <!-- <h4 class="card-title" style="background-color: greenyellow;" >{{product?.productName}}</h4> -->
+    <!-- <h4 class="card-title" [style.backgroundColor]="product.starRating>=3?'greenyellow':'red'"
+      [style.color]="product.starRating>=3?'blue':'white'" [style.fontWeight]="product.starRating>=3?'bold':''">
+      {{product?.productName}}</h4> -->
+    <h4 class="card-title" [class.goodRating]="product.starRating>=3" [class.badRating]="product.starRating<3">
+      {{product?.productName}}</h4>
+    <div class="card-text">
+      <div class="row">
+        <div class="col-md-6">Description</div>
+        <div class="col-md-6">{{product?.description?.descText}}</div>
+      </div>
+      <img [src]="product?.imageUrl" width="100px" height="100px" [alt]="product?.productName">
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    {{product?.description?.emailId}}
+    <button type="button" class="btn btn-primary" (click)="SendDataToParent()">Send Data to Parent</button>
+  </div>
+</div>

@@ -9,6 +9,10 @@ export class ProductsComponent {
 
     filterText: string = "";
 
+    ChildDataReceived(data) {
+        console.log(data);
+    }
+
     AddProduct() {
         this.products.push({
             "productId": 11,
@@ -25,9 +29,9 @@ export class ProductsComponent {
         });
     }
 
-    products: any[] = [];
+    //products: any[] = [];
 
-    tempproducts: any[] = [
+    products: any[] = [
         {
             "productId": 1,
             "productName": "Leaf Rake",
@@ -46,7 +50,7 @@ export class ProductsComponent {
             "productName": "Garden Cart",
             "productCode": "GDN-0023",
             "releaseDate": "March 18, 2016",
-            "description": { "descText": "15 gallon capacity rolling garden cart", "emailId": "test@test.com" },
+            //"description": { "descText": "15 gallon capacity rolling garden cart", "emailId": "test@test.com" },
             "price": 32.99985,
             "starRating": 2,
             "imageUrl": "https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
