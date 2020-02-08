@@ -14,10 +14,18 @@
         <strong>{{filterText}}</strong>
       </div>
     </div>
+
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary" (click)="AddProduct()">Test Impurity</button>
+    </div>
   </div>
   <div class="row">
-    <div *ngFor="let prod of products" class="col-md-4">
+    <div *ngFor="let prod of products | filter : filterText: 'productName'" class="col-md-4">
       <product-thumbnail [prod]="prod" (parentData)="ChildDataReceived($event)"></product-thumbnail>
     </div>
   </div>
+
+  <!-- <div class="alert alert-danger">
+    {{products | json}}
+  </div> -->
 </div>

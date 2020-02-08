@@ -21,16 +21,39 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ProductThumbnailComponent implements OnInit {
 
   @Input("prod") product;
-  @Output() parentData:EventEmitter<string>= new EventEmitter<string>();
+  @Output() parentData: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() {    
+  constructor() {
   }
 
   ngOnInit() {
   }
 
-  SendDataToParent(){
+  SendDataToParent() {
     let name = prompt("Enter Name");
     this.parentData.emit(name);
+  }
+
+  getClass() {
+    switch (this.product.starRating) {
+      case 1:
+        return ["badRating"];
+        break;
+      case 2:
+        return ["badRating"];
+        break;
+      case 3:
+        return "goodRating";
+        break;
+      case 4:
+        return ["goodRating"];
+        break;
+      case 5:
+        return ["goodRating"];
+        break;
+      default:
+        return [];
+        break;
+    }
   }
 }
