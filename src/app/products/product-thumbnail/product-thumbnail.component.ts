@@ -15,6 +15,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       background-color:red;
       color:white;
     }
+    // div{background-color:aqua;}
     `
   ]
 })

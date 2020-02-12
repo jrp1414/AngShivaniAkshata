@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'products',
     templateUrl: './products.component.html',
-    styles: []
+    styles: [
+        // `div{background-color:yellowgreen;}`
+    ],
+    // encapsulation:ViewEncapsulation.None
 })
 export class ProductsComponent {
 
