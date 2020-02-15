@@ -16,8 +16,11 @@ import {
   FilterPipe,
   BasicHighlightDirective,
   BetterHighlightDirective,
-  UnlessDirective
+  UnlessDirective,
+  Logger
 } from "./products/product.index";
+import { TempProuctsComponent } from './products/temp-proucts/temp-proucts.component';
+import { ProductService } from './products/product.service';
 
 // import * as index from "./products/product.index";
 
@@ -35,7 +38,8 @@ import {
     FilterPipe,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    TempProuctsComponent
     // index.ProductsComponent,
     // index.ProductThumbnailComponent,
     // index.ShortenPipe,
@@ -49,7 +53,8 @@ import {
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  // providers: [Logger,ProductService],
+  providers: [Logger],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

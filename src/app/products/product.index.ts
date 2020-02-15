@@ -6,3 +6,4 @@ export * from "./product-thumbnail/product-thumbnail.component";
 export * from "./replace-char.pipe";
 export * from "./shorten.pipe";
 export * from "./unless.directive";
+export * from "./logger.service";

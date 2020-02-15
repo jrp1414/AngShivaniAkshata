@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Logger } from '../logger.service';
+import { ProductService } from '../product.service';
 
 
 @Component({
@@ -17,14 +19,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
     }
     // div{background-color:aqua;}
     `
-  ]
+  ],
+  // providers:[Logger]
 })
 export class ProductThumbnailComponent implements OnInit {
 
   @Input("prod") product;
   @Output() parentData: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() {
+  constructor(private logger:Logger,private ps:ProductService) {
   }
 
   ngOnInit() {
@@ -32,7 +35,9 @@ export class ProductThumbnailComponent implements OnInit {
 
   SendDataToParent() {
     let name = prompt("Enter Name");
-    this.parentData.emit(name);
+    // this.logger.log(name);
+    this.ps.notify.emit(name);
+    // this.parentData.emit(name);
   }
 
   getClass() {
