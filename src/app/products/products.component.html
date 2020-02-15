@@ -1,7 +1,7 @@
 <div class="container">
   <h3 basic-highlight>Products List</h3>
   <!-- <div better-highlight [defaultColor]="'blue'">Test Div</div> -->
-  <div [better-highlight]="'blue'">Test Div</div>
+  <div [better-highlight]="'aliceblue'" highlight="yellowgreen">Test Div</div>
 
   <div class="row" style="margin-bottom: 20px;">
     <div class="col-md-2">
@@ -12,9 +12,17 @@
     </div>
 
     <div class="col-md-3">
-      <div *ngIf="filterText.length>0" class="alert alert-info" role="alert">
+      <!-- <div *ngIf="filterText.length>0" class="alert alert-info" role="alert">
+        <strong>{{filterText}}</strong>
+      </div> -->
+      <div *unless="filterText.length==0" class="alert alert-info" role="alert">
         <strong>{{filterText}}</strong>
       </div>
+      <!-- <ng-template [unless]="filterText.length==0">
+        <div class="alert alert-info" role="alert">
+          <strong>{{filterText}}</strong>
+        </div>
+      </ng-template> -->
     </div>
 
     <div class="col-md-3">

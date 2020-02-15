@@ -7,13 +7,19 @@ import { StringInterpolationComponent } from "./Basics/string-interpolation/stri
 import { PropertyBindingComponent } from './Basics/property-binding/property-binding.component';
 import { EventBindingComponent } from './Basics/event-binding/event-binding.component';
 import { TwowayBindingComponent } from './Basics/twoway-binding/twoway-binding.component';
-import { ProductsComponent } from './products/products.component';
-import { ProductThumbnailComponent } from './products/product-thumbnail/product-thumbnail.component';
-import { ShortenPipe } from "./products/shorten.pipe";
-import { ReplaceCharPipe } from './products/replace-char.pipe';
-import { FilterPipe } from './products/filter.pipe';
-import { BasicHighlightDirective } from "./products/basic-highlight.directive";
-import { BetterHighlightDirective } from './products/better-highlight.directive';
+
+import {
+  ProductsComponent,
+  ProductThumbnailComponent,
+  ShortenPipe,
+  ReplaceCharPipe,
+  FilterPipe,
+  BasicHighlightDirective,
+  BetterHighlightDirective,
+  UnlessDirective
+} from "./products/product.index";
+
+// import * as index from "./products/product.index";
 
 @NgModule({
   declarations: [
@@ -28,7 +34,16 @@ import { BetterHighlightDirective } from './products/better-highlight.directive'
     ReplaceCharPipe,
     FilterPipe,
     BasicHighlightDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    UnlessDirective
+    // index.ProductsComponent,
+    // index.ProductThumbnailComponent,
+    // index.ShortenPipe,
+    // index.ReplaceCharPipe,
+    // index.FilterPipe,
+    // index.BasicHighlightDirective,
+    // index.BetterHighlightDirective,
+    // index.UnlessDirective
   ],
   imports: [
     BrowserModule,
