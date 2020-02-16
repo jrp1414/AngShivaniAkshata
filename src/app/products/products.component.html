@@ -31,7 +31,7 @@
   </div>
   <div class="row">
     <div *ngFor="let prod of products | filter : filterText: 'productName'" class="col-md-4">
-      <product-thumbnail [prod]="prod" (parentData)="ChildDataReceived($event)"></product-thumbnail>
+      <product-thumbnail [routerLink]="['/productDetails',prod.productId]"  [prod]="prod" (parentData)="ChildDataReceived($event)"></product-thumbnail>
     </div>
   </div>
 
