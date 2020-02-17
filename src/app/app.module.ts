@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
-import {RouterModule} from "@angular/router";
+import { RouterModule } from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { StringInterpolationComponent } from "./Basics/string-interpolation/string-interpolation.component";
@@ -24,8 +24,9 @@ import { TempProuctsComponent } from './products/temp-proucts/temp-proucts.compo
 import { ProductService } from './products/product.service';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { routes } from './app.routing.module';
+import { routes, AppRoutingModule } from './app.routing.module';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
+import { StudentsModule } from './students/students.module';
 
 // import * as index from "./products/product.index";
 
@@ -60,7 +61,8 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    StudentsModule,
+    AppRoutingModule
   ],
   // providers: [Logger,ProductService],
   providers: [Logger],

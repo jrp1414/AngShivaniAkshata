@@ -17,6 +17,8 @@ export class ProductDetailsComponent implements OnInit {
     // this.product = this.ps.getProductDetails(+this.route.snapshot.params["id"]);
     this.route.params.subscribe(paramLIst => {
       this.product = this.ps.getProductDetails(+paramLIst["id"]);
+      console.log(paramLIst["name"]);
+      console.log(paramLIst["code"]);
     });
   }
 
